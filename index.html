@@ -6,11 +6,12 @@
     <title>Mehedi Hasan - Professional Portfolio</title>
     <style>
         :root {
-            --primary-color: #004b87;
-            --secondary-color: #0077b6;
-            --text-color: #333;
-            --light-bg: #f4f6f8;
-            --accent-color: #e0f2fe;
+            --primary-color: #0f172a; /* ডার্ক থিম কালার */
+            --secondary-color: #1e293b;
+            --accent-color: #38bdf8;
+            --text-color: #f8fafc;
+            --card-bg: #1e293b;
+            --light-bg: #0f172a;
         }
 
         body {
@@ -23,30 +24,33 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             color: #fff;
             padding: 3rem 1rem;
             text-align: center;
-        }
-
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid var(--accent-color);
         }
 
         header h1 {
             margin: 0 0 0.5rem;
             font-size: 2.5rem;
+            color: var(--accent-color);
         }
 
         header p {
             margin: 0.25rem 0;
             font-size: 1.1rem;
             opacity: 0.9;
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            margin: 1.5rem 0;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .container {
@@ -56,17 +60,17 @@
         }
 
         section {
-            background: #fff;
+            background: var(--card-bg);
             padding: 2rem;
             margin-bottom: 2rem;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         h2 {
-            border-bottom: 3px solid var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 0.5rem;
-            color: var(--primary-color);
+            color: var(--accent-color);
             margin-top: 0;
         }
 
@@ -83,43 +87,34 @@
 
         li::before {
             content: '✓';
-            color: var(--secondary-color);
+            color: var(--accent-color);
             position: absolute;
             left: 0;
             font-weight: bold;
         }
 
-        .contact-info {
-            text-align: center;
-            background: var(--accent-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-
         .btn {
             display: inline-block;
-            background: var(--primary-color);
-            color: #fff;
+            background: var(--accent-color);
+            color: #0f172a;
             padding: 0.75rem 1.5rem;
             text-decoration: none;
             border-radius: 5px;
             margin: 0.5rem;
             font-weight: bold;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background: var(--secondary-color);
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="your-image-url.jpg" alt="Mehedi Hasan" class="profile-pic">
         <h1>Mehedi Hasan</h1>
         <p>Quality Assurance Specialist | Pharmaceutical Industry</p>
-        <p>Bringing 9+ Years of Excellence in Quality Assurance & Compliance at Renata PLC.</p>
-        <div class="contact-info">
+        
+        <!-- হেডিং এর নিচে ছবি দেওয়া হলো -->
+        <img src="https://imgur.com/a/293DxXG" alt="Mehedi Hasan" class="profile-pic">
+
+        <p>Bringing 9+ Years of Excellence in Quality Assurance & cGMP Compliance at Renata PLC.</p>
+        <div>
             <a href="tel:+8801631228949" class="btn">Call</a>
             <a href="mailto:mohammaad.mehedi@gmail.com" class="btn">Email</a>
         </div>
@@ -128,7 +123,7 @@
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>Dedicated and resourceful Quality Assurance Specialist with over 9 years of hands-on experience in the pharmaceutical manufacturing sector. Specialized in upholding strict cGMP compliance, managing potent product facilities, and overseeing the quality control of tablet manufacturing processes.</p>
+            <p>Dedicated Quality Assurance Specialist with over 9 years of hands-on experience in pharmaceutical manufacturing. Specialized in cGMP compliance, managing potent product facilities, and quality checks in tablet manufacturing.</p>
         </section>
 
         <section id="experience">
@@ -137,8 +132,7 @@
             <ul>
                 <li>Ensure adherence to Standard Operating Procedures (SOPs) across manufacturing stages.</li>
                 <li>Oversee in-process quality checks including granulation and compression protocols.</li>
-                <li>Conduct thorough documentation and validation for FDA-regulated products.</li>
-                <li>Collaborate with production teams to resolve operational issues and optimize processes without compromising product integrity.</li>
+                <li>Conduct thorough documentation and validation for regulated products.</li>
             </ul>
         </section>
 
@@ -149,13 +143,6 @@
                 <li><strong>Higher Secondary Certificate (HSC)</strong> | Jashore Board</li>
                 <li><strong>Secondary School Certificate (SSC)</strong> | Jashore Board</li>
             </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Information</h2>
-            <p><strong>Phone:</strong> 01631-228949</p>
-            <p><strong>Email:</strong> mohammaad.mehedi@gmail.com</p>
-            <p><strong>Location:</strong> Jashore, Bangladesh</p>
         </section>
     </div>
 </body>
