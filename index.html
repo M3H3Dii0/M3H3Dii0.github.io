@@ -3,21 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehedi Hasan - Portfolio</title>
+    <title>Mehedi Hasan - Professional Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
-        header { background: #0077b6; color: #fff; padding: 2rem 1rem; text-align: center; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        section { margin-bottom: 2rem; }
-        h2 { border-bottom: 2px solid #0077b6; padding-bottom: 0.5rem; color: #0077b6; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin-bottom: 0.5rem; }
-        .contact-info { text-align: center; margin-top: 2rem; }
-        .btn { display: inline-block; background: #0077b6; color: #fff; padding: 0.5rem 1rem; text-decoration: none; border-radius: 5px; margin: 0.5rem; }
+        :root {
+            --primary-color: #004b87;
+            --secondary-color: #0077b6;
+            --text-color: #333;
+            --light-bg: #f4f6f8;
+            --accent-color: #e0f2fe;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0 0 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.25rem 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: #fff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            text-align: center;
+            background: var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0.5rem;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+        }
     </style>
 </head>
 <body>
     <header>
+        <img src="your-image-url.jpg" alt="Mehedi Hasan" class="profile-pic">
         <h1>Mehedi Hasan</h1>
         <p>Quality Assurance Specialist | Pharmaceutical Industry</p>
         <p>Bringing 9+ Years of Excellence in Quality Assurance & Compliance at Renata PLC.</p>
@@ -53,11 +151,11 @@
             </ul>
         </section>
 
-        <section id="contact" class="contact-info">
+        <section id="contact">
             <h2>Contact Information</h2>
-            <p>Phone: 01631-228949</p>
-            <p>Email: mohammaad.mehedi@gmail.com</p>
-            <p>Location: Jashore, Bangladesh</p>
+            <p><strong>Phone:</strong> 01631-228949</p>
+            <p><strong>Email:</strong> mohammaad.mehedi@gmail.com</p>
+            <p><strong>Location:</strong> Jashore, Bangladesh</p>
         </section>
     </div>
 </body>
