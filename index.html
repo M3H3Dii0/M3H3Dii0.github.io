@@ -1,149 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehedi Hasan - Professional Portfolio</title>
-    <style>
-        :root {
-            --primary-color: #0f172a; /* ডার্ক থিম কালার */
-            --secondary-color: #1e293b;
-            --accent-color: #38bdf8;
-            --text-color: #f8fafc;
-            --card-bg: #1e293b;
-            --light-bg: #0f172a;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            background-color: var(--light-bg);
-        }
-
-        header {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #fff;
-            padding: 3rem 1rem;
-            text-align: center;
-            border-bottom: 2px solid var(--accent-color);
-        }
-
-        header h1 {
-            margin: 0 0 0.5rem;
-            font-size: 2.5rem;
-            color: var(--accent-color);
-        }
-
-        header p {
-            margin: 0.25rem 0;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .profile-pic {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 3px solid var(--accent-color);
-            margin: 1.5rem 0;
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        section {
-            background: var(--card-bg);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        h2 {
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-            color: var(--accent-color);
-            margin-top: 0;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 0.75rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        li::before {
-            content: '✓';
-            color: var(--accent-color);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--accent-color);
-            color: #0f172a;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 0.5rem;
-            font-weight: bold;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mehedi Hasan | Quality Assurance Specialist | Pharmaceutical Industry</title>
+<meta name="description" content="Portfolio of Mehedi Hasan, Quality Assurance Specialist with 9+ years of experience in cGMP compliance and potent product manufacturing facilities.">
+<meta name="theme-color" content="#121212">
+<style>
+:root{--bg:#121212;--card:#1c1c1c;--text:#eaeaea;--muted:#9a9a9a;--gold:#e0b04c;--line:#2c2c2c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--gold);text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;background:rgba(18,18,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+nav .wrap{display:flex;gap:20px;align-items:center;justify-content:space-between;height:56px}
+nav ul{display:flex;gap:18px;list-style:none;font-size:.9rem}
+nav b{color:var(--gold)}
+section{padding:70px 0}
+h1{font-size:2.4rem}
+h2{font-size:1.7rem;margin-bottom:8px}
+h2+p.sub{color:var(--muted);margin-bottom:28px}
+.hero{display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:center}
+.hero img,.ph{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;border:2px solid var(--gold);background:var(--card)}
+.tag{color:var(--gold);letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
+.stats{display:flex;gap:28px;margin:24px 0;flex-wrap:wrap}
+.stats div b{display:block;font-size:1.5rem;color:var(--gold)}
+.stats div span{color:var(--muted);font-size:.85rem}
+.btn{display:inline-block;padding:10px 20px;border-radius:8px;background:var(--gold);color:#111;font-weight:600;border:0;cursor:pointer;font-size:1rem}
+.btn.o{background:transparent;color:var(--gold);border:1px solid var(--gold);margin-left:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+.card h3{font-size:1.05rem;margin-bottom:8px;color:var(--gold)}
+.card p{color:var(--muted);font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{border:1px solid var(--line);background:#222;padding:4px 12px;border-radius:99px;font-size:.82rem}
+.job{border-left:2px solid var(--gold);padding:0 0 26px 20px;margin-left:6px}
+.job h3{font-size:1.05rem}
+.job .m{color:var(--muted);font-size:.85rem;margin-bottom:6px}
+.job ul{padding-left:18px;color:var(--muted);font-size:.93rem}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;color:var(--muted);font-style:italic;margin-top:28px}
+form{display:grid;gap:12px;max-width:520px;margin-top:20px}
+input,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:var(--muted);font-size:.85rem}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.hero .ph{max-width:220px;margin:0 auto}nav ul{display:none}h1{font-size:1.9rem}}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Mehedi Hasan</h1>
-        <p>Quality Assurance Specialist | Pharmaceutical Industry</p>
-        
-        <!-- হেডিং এর নিচে ছবি দেওয়া হলো -->
-        <img src="https://freeimghost.com/i/AtRWTu" alt="Mehedi Hasan" class="profile-pic">
+<nav>
+  <div class="wrap">
+    <b>Mehedi Hasan</b>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-        <p>Bringing 9+ Years of Excellence in Quality Assurance & cGMP Compliance at Renata PLC.</p>
-        <div>
-            <a href="tel:+8801631228949" class="btn">Call</a>
-            <a href="mailto:mohammaad.mehedi@gmail.com" class="btn">Email</a>
+<section id="about">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <p class="tag">Quality Assurance Specialist · Junior Officer</p>
+        <h1>cGMP Compliance & Quality Operations</h1>
+        <p style="color:var(--muted);margin-top:14px">Dedicated Quality Assurance professional with over 9 years of hands-on experience in pharmaceutical manufacturing at Renata PLC (Potent Product Facility). Expert in cGMP compliance, SOP management, in-process quality assurance, and contamination control.</p>
+        <div class="stats">
+          <div><b>9+ Yrs</b><span>At Renata PLC</span></div>
+          <div><b>cGMP</b><span>Potent Facility</span></div>
+          <div><b>QA/QC</b><span>Compliance Expert</span></div>
         </div>
-    </header>
-
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Dedicated Quality Assurance Specialist with over 9 years of hands-on experience in pharmaceutical manufacturing. Specialized in cGMP compliance, managing potent product facilities, and quality checks in tablet manufacturing.</p>
-        </section>
-
-        <section id="experience">
-            <h2>Experience & Competencies</h2>
-            <h3>Junior Officer, Quality Assurance | Renata PLC (Potent Product Facility)</h3>
-            <ul>
-                <li>Ensure adherence to Standard Operating Procedures (SOPs) across manufacturing stages.</li>
-                <li>Oversee in-process quality checks including granulation and compression protocols.</li>
-                <li>Conduct thorough documentation and validation for regulated products.</li>
-            </ul>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Bachelor of Social Science (BSS)</strong> | National University</li>
-                <li><strong>Higher Secondary Certificate (HSC)</strong> | Jashore Board</li>
-                <li><strong>Secondary School Certificate (SSC)</strong> | Jashore Board</li>
-            </ul>
-        </section>
+        <a class="btn" href="#contact">Get in touch</a><a class="btn o" href="#resume">View resume</a>
+      </div>
+      <!-- ছবি লিংক করার জায়গা -->
+      <img class="ph" src="https://freeimghost.com/i/AtRWTuhttps://freeimghost.com/i/AtRf2W" alt="Mehedi Hasan">
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Core Expertise & Quality Assurance</h2>
+    <p class="sub">Ensuring strict adherence to regulatory compliance, quality verification, and operational standards.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>c-GMP & Quality Assurance</h3>
+        <p>Ensuring end-to-end compliance with global cGMP guidelines, cleanroom protocols, and batch documentation integrity.</p>
+      </div>
+      <div class="card">
+        <h3>In-Process Quality Control (IPQC)</h3>
+        <p>Conducting process validations, weight variation, hardness testing, and active parameter monitoring during solid dose production.</p>
+      </div>
+      <div class="card">
+        <h3>SOPs & Documentation</h3>
+        <p>Authoring, reviewing, and enforcing Standard Operating Procedures, deviation tracking, and audit readiness.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resume">
+  <div class="wrap">
+    <h2>Resume</h2>
+    <p class="sub">Professional career trajectory in Pharmaceutical Quality Assurance.</p>
+    
+    <h3 style="margin-bottom:14px">Experience</h3>
+    <div class="job">
+      <h3>Junior Officer (Quality Assurance) — Renata PLC</h3>
+      <div class="m">Potent Product Facility, Rajendrapur, Gazipur</div>
+      <ul>
+        <li>Oversee in-process quality control checks across solid dosage and manufacturing units.</li>
+        <li>Ensure compliance with cGMP, WHO standards, and internal quality policies.</li>
+        <li>Review Batch Manufacturing Records (BMR) and Batch Packaging Records (BPR).</li>
+        <li>Conduct line clearance, room qualification checks, and contamination controls.</li>
+      </ul>
+    </div>
+
+    <h3 style="margin:20px 0 14px">Education</h3>
+    <div class="job">
+      <h3>Bachelor of Social Science (BSS)</h3>
+      <div class="m">National University</div>
+    </div>
+    <div class="job">
+      <h3>Higher Secondary Certificate (HSC)</h3>
+      <div class="m">Jashore Board</div>
+    </div>
+    <div class="job">
+      <h3>Secondary School Certificate (SSC)</h3>
+      <div class="m">Jashore Board</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills & Expertise</h2>
+    <p class="sub">Technical competencies in quality assurance and manufacturing.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Quality & Compliance</h3>
+        <div class="chips">
+          <span class="chip">cGMP</span>
+          <span class="chip">SOP</span>
+          <span class="chip">QA/QC</span>
+          <span class="chip">IPQC</span>
+          <span class="chip">Line Clearance</span>
+          <span class="chip">BMR/BPR Review</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Safety & Operations</h3>
+        <div class="chips">
+          <span class="chip">Potent Handling</span>
+          <span class="chip">EHS Compliance</span>
+          <span class="chip">Cleanroom Protocol</span>
+          <span class="chip">PPE</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Soft Skills</h3>
+        <div class="chips">
+          <span class="chip">Team Leadership</span>
+          <span class="chip">Attention to Detail</span>
+          <span class="chip">Problem Solving</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="sub">For professional inquiries, reach out directly.</p>
+    <p>Email: <a href="mailto:mohammaad.mehedi@gmail.com">mohammaad.mehedi@gmail.com</a><br>
+    Phone: <a href="tel:+8801631228949">+8801631228949</a></p>
+    
+    <form onsubmit="event.preventDefault();location.href='mailto:mohammaad.mehedi@gmail.com?subject='+encodeURIComponent('Message from '+this.n.value)+'&body='+encodeURIComponent(this.m.value)">
+      <input name="n" placeholder="Your name" required>
+      <input name="e" type="email" placeholder="Your email" required>
+      <textarea name="m" rows="4" placeholder="Message" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>© Mehedi Hasan. All rights reserved.</footer>
 </body>
 </html>
