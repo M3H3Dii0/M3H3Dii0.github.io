@@ -169,7 +169,7 @@ footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:v
     
     <form onsubmit="event.preventDefault();location.href='mailto:mohammaad.mehedi@gmail.com?subject='+encodeURIComponent('Message from '+this.n.value)+'&body='+encodeURIComponent(this.m.value)">
       <input name="n" placeholder="Your name" required>
-      <input name="e" type="email" placeholder="Your email" required>
+      <input name="e" type="email" placeholder="Your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
       <textarea name="m" rows="4" placeholder="Message" required></textarea>
       <button class="btn" type="submit">Send Message</button>
     </form>
