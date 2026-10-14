@@ -1,286 +1,769 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="google-site-verification: google263ca4c37af6ef65.html"> 
-<title>Mehedi Hasan | Quality Assurance Specialist | Pharmaceutical Industry</title>
-<meta name="description" content="Portfolio of Mehedi Hasan, Quality Assurance Specialist with 9+ years of experience in cGMP compliance, WHO-approved potent product manufacturing, and audit readiness.">
-<meta name="keywords" content="Mehedi Hasan, Quality Assurance, cGMP, WHO-PQ, EU-GMP, Renata PLC, Pharmaceutical QA Bangladesh, IPQC, BMR Review">
-<meta name="theme-color" content="#121212">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="Mehedi Hasan — Pharmaceutical Quality Assurance Professional">
+  <title>Mehedi Hasan | Quality Assurance Professional</title>
 
-<!-- Browser Tab Icon (Favicon) -->
-<link rel="icon" href="https://i.postimg.cc/2SyXPpq9/mh-jpg.png" type="image/png">
-<link rel="apple-touch-icon" href="https://i.postimg.cc/2SyXPpq9/mh-jpg.png">
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --card: #151515;
+      --gold: #d6b56d;
+      --text: #f5f5f5;
+      --muted: #b8b8b8;
+      --border: #3a3020;
+      --green: #25D366;
+    }
 
-<style>
-:root{--bg:#121212;--card:#1c1c1c;--text:#eaeaea;--muted:#9a9a9a;--gold:#e0b04c;--line:#2c2c2c}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding-top:65px}
-a{color:var(--gold);text-decoration:none}
-.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-/* Fixed & Enhanced Header Navigation with Smaller Logo & Clickable Link */
-nav{position:fixed;top:0;left:0;width:100%;background:rgba(18,18,18,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:1000}
-nav .wrap{display:flex;gap:20px;align-items:center;justify-content:space-between;height:65px}
-nav .brand-link{display:flex;align-items:center;gap:10px;text-decoration:none}
-nav .brand-logo{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1px solid var(--gold)}
-nav .brand-name{color:var(--gold);font-size:1.25rem;font-weight:700;letter-spacing:0.5px;text-transform:uppercase}
-nav .brand-link:hover .brand-name{color:#fff;transition:color 0.2s ease}
-nav ul{display:flex;gap:22px;list-style:none;font-size:.95rem;font-weight:500}
-nav ul a:hover{color:#fff;transition:color 0.2s ease}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
 
-section{padding:70px 0}
-h1{font-size:2.4rem}
-h2{font-size:1.7rem;margin-bottom:8px}
-h2+p.sub{color:var(--muted);margin-bottom:28px}
-.hero{display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:center}
-.hero img,.ph{width:100%;aspect-ratio:1;object-fit:cover;border-radius:16px;border:2px solid var(--gold);background:var(--card)}
-.tag{color:var(--gold);letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
-.stats{display:flex;gap:28px;margin:24px 0;flex-wrap:wrap}
-.stats div b{display:block;font-size:1.5rem;color:var(--gold)}
-.stats div span{color:var(--muted);font-size:.85rem}
-.btn{display:inline-block;padding:10px 20px;border-radius:8px;background:var(--gold);color:#111;font-weight:600;border:0;cursor:pointer;font-size:1rem}
-.btn.o{background:transparent;color:var(--gold);border:1px solid var(--gold);margin-left:8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column;justify-content:space-between}
-.card h3{font-size:1.1rem;margin-bottom:8px;color:var(--gold)}
-.card p{color:var(--muted);font-size:.95rem;line-height:1.6}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.chip{border:1px solid var(--line);background:#222;padding:4px 12px;border-radius:99px;font-size:.82rem}
-.job{border-left:2px solid var(--gold);padding:0 0 26px 20px;margin-left:6px;position:relative}
-.job h3{font-size:1.05rem}
-.job .m{color:var(--muted);font-size:.85rem;margin-bottom:6px}
-.job ul{padding-left:18px;color:var(--muted);font-size:.93rem}
-blockquote{border-left:3px solid var(--gold);padding:10px 20px;color:var(--muted);font-style:italic;margin-top:28px}
-form{display:grid;gap:12px;max-width:520px;margin-top:20px}
-input,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
-footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:var(--muted);font-size:.85rem}
-@media(max-width:700px){.hero{grid-template-columns:1fr}.hero .ph{max-width:220px;margin:0 auto}nav ul{display:none}h1{font-size:1.9rem}nav .brand-name{font-size:1.05rem}}
-</style>
-</head>
-<body>
-<nav>
-  <div class="wrap">
-    <a href="#about" class="brand-link">
-      <img src="https://i.postimg.cc/2SyXPpq9/mh-jpg.png" alt="MH Logo" class="brand-logo">
-      <span class="brand-name">Mehedi Hasan</span>
-    </a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">WHO & Compliance</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-<section id="about">
-  <div class="wrap">
-    <div class="hero">
-      <div>
-        <p class="tag">Quality Assurance Specialist · Junior Officer</p>
-        <h1>cGMP Compliance & Quality Operations</h1>
-        <p style="color:var(--muted);margin-top:14px">Dedicated Quality Assurance professional with over 9 years of hands-on experience in pharmaceutical manufacturing at Renata PLC (Potent Product Facility). Expert in cGMP compliance, SOP management, and successfully supported multiple WHO regulatory inspections.</p>
-        <div class="stats">
-          <div><b>9+ Yrs</b><span>At Renata PLC</span></div>
-          <div><b>WHO-PQ</b><span>Approved Facility</span></div>
-          <div><b>QA/QC</b><span>Compliance Expert</span></div>
-        </div>
-        <a class="btn" href="#contact">Get in touch</a><a class="btn o" href="#portfolio">View Portfolio</a>
-      </div>
-      <img class="ph" src="https://i.postimg.cc/GdptpPH2/mehedi.png" alt="Mehedi Hasan">
-    </div>
-  </div>
-</section>
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
 
-<!-- WHO & Compliance Highlights -->
-<section id="projects" style="background: rgba(255,255,255,0.01); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-  <div class="wrap">
-    <h2>WHO-PQ & Regulatory Highlights</h2>
-    <p class="sub">Key technical contributions, inspection readiness, and quality framework implementations.</p>
-    <div class="grid">
-      <div class="card">
-        <div>
-          <h3>WHO-PQ Inspection Readiness (2023 & 2026)</h3>
-          <p>Managed technical QA documentation and cleanroom validation protocols for WHO-Prequalification audits at the Potent Product Facility. Executed rigorous gap analysis, personnel training, and batch traceabilities to ensure zero critical non-conformities.</p>
-        </div>
-        <div class="chips">
-          <span class="chip">WHO-PQ</span>
-          <span class="chip">Gap Analysis</span>
-          <span class="chip">Audit Management</span>
-        </div>
-      </div>
+    /* HEADER AND BOLD NAVIGATION */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 11, 11, .97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
 
-      <div class="card">
-        <div>
-          <h3>cGMP & EU-GMP Readiness Protocols</h3>
-          <p>Spearheading QA operational readiness and documentation frameworks for upcoming EU-GMP audits. Standardized Batch Manufacturing Records (BMR) and Batch Packaging Records (BPR) to align with European regulatory expectations.</p>
-        </div>
-        <div class="chips">
-          <span class="chip">EU-GMP Prep</span>
-          <span class="chip">BMR/BPR Review</span>
-          <span class="chip">Standardization</span>
-        </div>
-      </div>
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-      <div class="card">
-        <div>
-          <h3>Potent Facility In-Process Quality Control (IPQC)</h3>
-          <p>Supervising daily in-process quality control operations across oral solid dosage units. Enforcing containment protocols, line clearances, contamination prevention, and real-time deviation management.</p>
-        </div>
-        <div class="chips">
-          <span class="chip">IPQC</span>
-          <span class="chip">Potent Handling</span>
-          <span class="chip">Line Clearance</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    .logo {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      flex-shrink: 0;
+    }
 
-<section>
-  <div class="wrap">
-    <h2>Core Expertise & Quality Assurance</h2>
-    <p class="sub">Ensuring strict adherence to regulatory compliance, quality verification, and operational standards.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>c-GMP & Quality Assurance</h3>
-        <p>Ensuring end-to-end compliance with global cGMP guidelines, cleanroom protocols, and batch documentation integrity.</p>
-      </div>
-      <div class="card">
-        <h3>Regulatory Inspection Success</h3>
-        <p>Active participant and QA lead in successful WHO-PQ inspections (2023 & 2026), demonstrating flawless documentation and compliance standards.</p>
-      </div>
-      <div class="card">
-        <h3>Audit Preparation & Readiness</h3>
-        <p>Preparing quality systems and facility protocols for upcoming European Union GMP (EU-GMP) audits.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
 
-<!-- Portfolio / Education & Experience Section -->
-<section id="portfolio">
-  <div class="wrap">
-    <h2>Portfolio & Career Background</h2>
-    <p class="sub">Professional career trajectory and comprehensive educational background in pharmaceutical quality operations.</p>
-    
-    <h3 style="margin-bottom:14px">Professional Experience</h3>
-    <div class="job">
-      <h3>Junior Officer (Quality Assurance) — Renata PLC[cite: 1]</h3>
-      <div class="m">Potent Product Facility, Rajendrapur, Gazipur[cite: 1]</div>
-      <ul>
-        <li>Oversee in-process quality control checks across solid dosage and manufacturing units[cite: 1].</li>
-        <li>Review Batch Manufacturing Records (BMR) and Batch Packaging Records (BPR) to ensure compliance with cGMP and WHO standards[cite: 1].</li>
-        <li>Successfully supported and managed QA documentation for WHO-PQ regulatory audits in 2023 and 2026 with positive facility reviews[cite: 1].</li>
-        <li>Leading audit readiness protocols and process validations for the upcoming EU-GMP certification[cite: 1].</li>
-      </ul>
-    </div>
-    
-    <h3 style="margin:25px 0 14px">Educational Qualification</h3>
-    
-    <div class="job">
-      <h3>Bachelor of Social Science (Pass)</h3>
-      <div class="m">Bhawal Mirzapur College Gazipur | Passing Year: 2020 | Result: CGPA 2.80 (2nd Division)[cite: 1]</div>
-      <p style="color:var(--muted); font-size:0.9rem;">Group: Humanities | Board: National University[cite: 1]</p>
-    </div>
+    .nav-links a {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      transition: color .2s;
+    }
 
-    <div class="job">
-      <h3>Higher Secondary Certificate (H.S.C)</h3>
-      <div class="m">Gopalpur School & College, Manirampur | Passing Year: 2017 | Result: GPA 3.67[cite: 1]</div>
-      <p style="color:var(--muted); font-size:0.9rem;">Group: Humanities | Board: Jeshore[cite: 1]</p>
-    </div>
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--gold);
+    }
 
-    <div class="job">
-      <h3>Secondary School Certificate (S.S.C)</h3>
-      <div class="m">Gopalpur School & College, Manirampur | Passing Year: 2015 | Result: GPA 3.67[cite: 1]</div>
-      <p style="color:var(--muted); font-size:0.9rem;">Group: Business Studies | Board: Jashore[cite: 1]</p>
-    </div>
-  </div>
-</section>
+    section {
+      padding: 75px 0;
+      scroll-margin-top: 85px;
+    }
 
-<section id="skills">
-  <div class="wrap">
-    <h2>Skills & Expertise</h2>
-    <p class="sub">Technical competencies in quality assurance and manufacturing compliance.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>Compliance & Auditing</h3>
-        <div class="chips">
-          <span class="chip">cGMP</span>
-          <span class="chip">WHO-PQ</span>
-          <span class="chip">EU-GMP Prep</span>
-          <span class="chip">QA/QC</span>
-          <span class="chip">Audit Readiness</span>
-        </div>
-      </div>
-      <div class="card">
-        <h3>Quality Control</h3>
-        <div class="chips">
-          <span class="chip">IPQC</span>
-          <span class="chip">BMR/BPR Review</span>
-          <span class="chip">Documentation</span>
-          <span class="chip">Line Clearance</span>
-        </div>
-      </div>
-      <div class="card">
-        <h3>Operations</h3>
-        <div class="chips">
-          <span class="chip">Potent Handling</span>
-          <span class="chip">Team Leadership</span>
-          <span class="chip">Problem Solving</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    .hero {
+      min-height: 76vh;
+      display: flex;
+      align-items: center;
+      padding: 65px 0;
+    }
 
-<section id="contact">
-  <div class="wrap">
-    <h2>Contact</h2>
-    <p class="sub">For professional inquiries, reach out directly.</p>
-    <p>Email: <a href="mailto:mohammaad.mehedi@gmail.com">mohammaad.mehedi@gmail.com</a><br>
-    Phone: <a href="tel:+8801631228949">+8801631228949</a></p>
-    
-    <form onsubmit="event.preventDefault();location.href='mailto:mohammaad.mehedi@gmail.com?subject='+encodeURIComponent('Message from '+this.n.value)+'&body='+encodeURIComponent(this.m.value)">
-      <input name="n" placeholder="Your name" required>
-      <input name="e" type="email" placeholder="Your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-      <textarea name="m" rows="4" placeholder="Message" required></textarea>
-      <button class="btn" type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      align-items: center;
+      gap: 45px;
+    }
 
-<footer>
-  <div class="wrap">
-    <p>© Mehedi Hasan. All rights reserved.</p>
-    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--gold);">
-      Total Visitors: <span id="visit-count" style="font-weight: bold; background: #222; padding: 2px 10px; border-radius: 6px; border: 1px solid var(--line);">Loading...</span>
-    </p>
-  </div>
+    .eyebrow {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
 
-  <script>
-    async function updateCounter() {
-      try {
-        const response = await fetch('https://api.counterapi.dev/v1/mehedihasan-qa-portfolio/visits/up');
-        const data = await response.json();
-        if (data && data.count) {
-          document.getElementById('visit-count').innerText = data.count;
-        } else {
-          throw new Error('API Response invalid');
-        }
-      } catch (error) {
-        let localCount = localStorage.getItem('site_visits') || 120;
-        localCount = parseInt(localCount) + 1;
-        localStorage.setItem('site_visits', localCount);
-        document.getElementById('visit-count').innerText = localCount;
+    h1 {
+      font-size: clamp(38px, 6vw, 65px);
+      line-height: 1.15;
+      margin: 15px 0;
+    }
+
+    h1 span, h2 span {
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    .hero p, .section-description {
+      color: var(--muted);
+    }
+
+    .profile-img {
+      display: block;
+      width: 100%;
+      max-width: 330px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      margin: auto;
+      border: 2px solid var(--gold);
+      border-radius: 18px;
+      box-shadow: 0 0 35px rgba(214, 181, 109, .12);
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 19px;
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+      font-weight: 800;
+      transition: .2s;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #111;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: .9;
+    }
+
+    .section-description {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card);
+      overflow-wrap: anywhere;
+    }
+
+    .card h3 {
+      color: var(--gold);
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      padding: 8px 15px;
+      color: var(--gold);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* CONTACT FORM */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-links a {
+      color: var(--gold);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 15px;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 7px;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 14px;
+      color: white;
+      background: #0d0d0d;
+      border: 1px solid #49402e;
+      border-radius: 7px;
+      font: inherit;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px rgba(214,181,109,.12);
+    }
+
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .form-status {
+      color: var(--gold);
+      font-size: 13px;
+    }
+
+    /* FOOTER + VISITOR COUNTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-name {
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .visitor-counter {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--gold);
+      background: var(--card);
+      font-weight: 700;
+    }
+
+    .visitor-counter strong {
+      color: white;
+    }
+
+    footer p {
+      margin-top: 8px;
+    }
+
+    /* FLOATING WHATSAPP BUTTON */
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 9999;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--green);
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, .4);
+      transition: transform .2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float svg {
+      width: 34px;
+      height: 34px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 760px) {
+      .navbar {
+        padding: 12px 0;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 8px 12px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .hero-grid, .grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 50px 0;
+      }
+
+      .hero-grid {
+        gap: 32px;
+      }
+
+      .profile-img {
+        max-width: 260px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .whatsapp-float {
+        right: 16px;
+        bottom: 18px;
+        width: 54px;
+        height: 54px;
+      }
+
+      .whatsapp-float svg {
+        width: 30px;
+        height: 30px;
       }
     }
-    updateCounter();
-  </script>
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a href="#home" aria-label="Go to home">
+      <img class="logo"
+        src="https://i.postimg.cc/2SyXPpq9/mh-jpg.png"
+        alt="Mehedi Hasan logo">
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#experience">EXPERIENCE</a>
+      <a href="#education">EDUCATION</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#portfolio">PORTFOLIO</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Pharmaceutical Quality Assurance</div>
+        <h1>Mehedi <span>Hasan</span></h1>
+        <h3>Junior Officer — Quality Assurance</h3>
+        <p>
+          Pharmaceutical Quality Assurance professional at Renata PLC,
+          focused on quality systems, GMP compliance, documentation,
+          and continuous improvement.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary"
+            href="https://drive.google.com/file/d/1xHm7tvl_xE6TomN9UHx7VGlPwi0153h-/view?usp=drivesdk"
+            target="_blank" rel="noopener noreferrer">
+            View / Download CV
+          </a>
+
+          <a class="btn"
+            href="https://www.linkedin.com/in/mohammad-mehedi-b35ab8333"
+            target="_blank" rel="noopener noreferrer">
+            LinkedIn Profile ↗
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <img class="profile-img"
+          src="https://i.postimg.cc/GdptpPH2/mehedi.png"
+          alt="Mehedi Hasan portrait">
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>ABOUT <span>ME</span></h2>
+      <p class="section-description">
+        I work in pharmaceutical Quality Assurance, supporting quality
+        systems, manufacturing documentation, in-process controls, and
+        compliance with applicable GMP requirements. My focus is on
+        documentation accuracy, product quality, and patient safety.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Professional Focus</h3>
+          <ul>
+            <li>Pharmaceutical Quality Assurance</li>
+            <li>cGMP and compliance practices</li>
+            <li>Batch Manufacturing Records (BMR)</li>
+            <li>Batch Packaging Records (BPR)</li>
+            <li>In-Process Quality Control (IPQC)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Career Objective</h3>
+          <p>
+            To strengthen pharmaceutical quality systems, support
+            compliant manufacturing, and develop further expertise in
+            Quality Assurance.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2>WORK <span>EXPERIENCE</span></h2>
+      <article class="card">
+        <h3>Junior Officer — Quality Assurance</h3>
+        <p><strong>Renata PLC</strong></p>
+        <p>Potent Product Facility, Rajendrapur, Gazipur, Bangladesh</p>
+        <p>
+          Pharmaceutical QA activities, GMP documentation, production
+          quality checks, and compliance support.
+        </p>
+        <p><strong>Experience:</strong> 9+ years — verify the duration before publishing.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="compliance">
+    <div class="container">
+      <h2>QUALITY &amp; <span>COMPLIANCE</span></h2>
+      <div class="grid">
+        <article class="card">
+          <h3>GMP Documentation</h3>
+          <p>
+            BMR/BPR documentation, record review, and good documentation
+            practices.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Quality Systems</h3>
+          <p>
+            cGMP awareness, IPQC, and applicable WHO-related compliance
+            requirements.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2>MY <span>EDUCATION</span></h2>
+      <div class="grid">
+        <article class="card">
+          <h3>BSS (Pass)</h3>
+          <p>Bhawal Mirzapur College, Gazipur</p>
+          <p>National University</p>
+          <p>Passing year: 2020</p>
+          <p>Result: CGPA 2.80 (as provided)</p>
+          <p>Group: Humanities</p>
+        </article>
+
+        <article class="card">
+          <h3>HSC</h3>
+          <p>Gopalpur School &amp; College, Manirampur</p>
+          <p>Board: Jessore (Jashore)</p>
+          <p>Passing year: 2017</p>
+          <p>GPA: 3.67 | Humanities</p>
+        </article>
+
+        <article class="card">
+          <h3>SSC</h3>
+          <p>Gopalpur School &amp; College, Manirampur</p>
+          <p>Board: Jessore (Jashore)</p>
+          <p>Passing year: 2015</p>
+          <p>GPA: 3.67 | Business Studies</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>PROFESSIONAL <span>SKILLS</span></h2>
+      <div class="skills">
+        <span class="skill">Quality Assurance</span>
+        <span class="skill">cGMP</span>
+        <span class="skill">BMR Review</span>
+        <span class="skill">BPR Review</span>
+        <span class="skill">IPQC</span>
+        <span class="skill">Documentation</span>
+        <span class="skill">GMP Compliance</span>
+        <span class="skill">Quality Systems</span>
+        <span class="skill">WHO Guidelines Awareness</span>
+        <span class="skill">Teamwork</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <h2>MY <span>PORTFOLIO</span></h2>
+      <p class="section-description">
+        Explore my CV, professional profile, certificates, and achievements.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Curriculum Vitae</h3>
+          <p>View my professional background and career information.</p>
+          <div class="buttons">
+            <a class="btn btn-primary"
+              href="https://drive.google.com/file/d/1xHm7tvl_xE6TomN9UHx7VGlPwi0153h-/view?usp=drivesdk"
+              target="_blank" rel="noopener noreferrer">Open CV</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>LinkedIn Profile</h3>
+          <p>Connect with me professionally.</p>
+          <div class="buttons">
+            <a class="btn"
+              href="https://www.linkedin.com/in/mohammad-mehedi-b35ab8333"
+              target="_blank" rel="noopener noreferrer">Visit LinkedIn</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Certificates</h3>
+          <p>Add your verified professional training certificates here.</p>
+        </article>
+
+        <article class="card">
+          <h3>Articles &amp; Achievements</h3>
+          <p>Add relevant articles, projects, and professional achievements here.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>CONTACT <span>ME</span></h2>
+      <p class="section-description">
+        For professional networking and work-related enquiries, send me a message.
+      </p>
+
+      <div class="contact-grid">
+        <div class="card contact-links">
+          <h3>Contact Details</h3>
+          <p><strong>Email:</strong><br>
+            <a href="mailto:mohammaad.mehedi@gmail.com">
+              moh ammaad.mehedi@gmail.com
+            </a>
+          </p>
+          <p><strong>Phone:</strong><br>
+            <a href="tel:+8801631228949">+8801631228949</a>
+          </p>
+          <p><strong>WhatsApp:</strong><br>
+            <a href="https://wa.me/8801631228949"
+              target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a>
+          </p>
+          <p><strong>LinkedIn:</strong><br>
+            <a href="https://www.linkedin.com/in/mohammad-mehedi-b35ab8333"
+              target="_blank" rel="noopener noreferrer">Visit LinkedIn ↗</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Send Me an Email</h3>
+
+          <!-- FormSubmit sends form submissions to your email.
+               First submission requires email activation. -->
+          <form class="contact-form"
+            action="https://formsubmit.co/mohammaad.mehedi@gmail.com"
+            method="POST">
+
+            <input type="hidden" name="_subject"
+              value="New message from Mehedi Hasan's portfolio">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="text" name="_honey"
+              style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="form-group">
+              <label for="sender-name">Your Name</label>
+              <input id="sender-name" type="text" name="name"
+                placeholder="Enter your full name"
+                minlength="2" maxlength="100" required>
+            </div>
+
+            <div class="form-group">
+              <label for="sender-email">Your Email Address</label>
+              <input id="sender-email" type="email" name="email"
+                placeholder="name@example.com"
+                maxlength="254" autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="sender-subject">Subject</label>
+              <input id="sender-subject" type="text" name="message_subject"
+                placeholder="Enter email subject"
+                minlength="3" maxlength="150" required>
+            </div>
+
+            <div class="form-group">
+              <label for="sender-message">Your Message</label>
+              <textarea id="sender-message" name="message"
+                placeholder="Write your message here..."
+                minlength="10" maxlength="5000" required></textarea>
+            </div>
+
+            <p class="form-note">
+              A correctly formatted email address is required.
+              Email format validation cannot guarantee that an inbox exists.
+            </p>
+
+            <button class="btn btn-primary" type="submit">
+              Send Email →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <span class="footer-name">© <span id="year"></span> Mehedi Hasan</span>
+
+      <span class="visitor-counter" aria-live="polite">
+        <span aria-hidden="true">👁</span>
+        Visitors: <strong id="visitor-count">Loading...</strong>
+      </span>
+    </div>
+    <p>Pharmaceutical Quality Assurance Professional</p>
+    <p>All rights reserved.</p>
+  </div>
 </footer>
-</body>
-</html>
+
+<!-- Floating WhatsApp -->
+<a class="whatsapp-float"
+  href="https://wa.me/8801631228949?text=Hello%20Mehedi%2C%20I%20visited%20your%20portfolio%20website."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contact Mehedi on WhatsApp"
+  title="Chat on WhatsApp">
+
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M16.02 3C8.85 3 3.02 8.79 3.02 15.92c0 2.27.6 4.49 1.74 6.45L3 29l6.82-1.78a13.1 13.1 0 0 0 6.2 1.57h.01c7.16 0 13-5.8 13-12.92A12.83 12.83 0 0 0 16.02 3Zm0 23.6c-1.92 0-3.8-.52-5.44-1.5l-.39-.23-4.05 1.06 1.08-3.92-.25-.4a10.62 10.62 0 0 1-1.65-5.69c0-5.9 4.82-10.7 10.72-10.7 2.86 0 5.55 1.11 7.57 3.13a10.58 10.58 0 0 1 3.14 7.55c0 5.9-4.81 10.7-10.73 10.7Zm5.89-8.01c-.32-.16-1.9-.94-2.2-1.04-.3-.11-.51-.16-.72.16-.21.32-.83 1.04-1.02 1.26-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.84-1.59-1.87-1.78-2.19-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.73-.99-2.37-.26-.62-.53-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.15 3.09 1.31 3.3c.16.21 2.26 3.45 5.48 4.84.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37Z"/>
+  </svg>
+</a>
+
+<script>
+  // Current year
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  // Visitor counter: requires internet and a w
