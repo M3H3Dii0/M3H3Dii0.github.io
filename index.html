@@ -730,7 +730,7 @@
     /* ============ FOOTER ============ */
     footer {
       border-top: 1px solid var(--border);
-      padding: 32px 0;
+      padding: 40px 0 32px;
       background: var(--bg-soft);
       transition: background 0.35s ease, border-color 0.35s ease;
     }
@@ -738,15 +738,16 @@
     .footer-main {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px 24px;
+      margin-bottom: 18px;
     }
 
     .footer-name {
       color: var(--text);
       font-weight: 700;
-      font-size: 15px;
+      font-size: 16px;
       letter-spacing: -0.01em;
     }
 
@@ -767,8 +768,7 @@
 
     .visitor-counter strong { color: var(--gold); }
 
-    footer p {
-      margin-top: 16px;
+    footer .copyright {
       font-size: 13px;
       color: var(--muted);
       text-align: center;
@@ -861,7 +861,7 @@
         width: 52px; height: 52px;
       }
       .whatsapp-float svg { width: 24px; height: 24px; }
-      .footer-main { justify-content: center; text-align: center; }
+      .footer-main { gap: 12px 16px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1114,11 +1114,9 @@
 
         <!-- ============ EMAIL FORM (Web3Forms) ============ -->
         <form class="contact-form" id="contactForm" novalidate>
-          <!-- Web3Forms config -->
           <input type="hidden" name="access_key" value="d706cf53-9ff1-4e63-bf59-5e54b430454c" />
           <input type="hidden" name="subject" value="New message from your website" />
           <input type="hidden" name="from_name" value="Mehedi Hasan Website" />
-          <!-- honeypot for spam bots -->
           <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
 
           <div class="form-row">
@@ -1159,7 +1157,7 @@
           Visitors: <strong id="visitorCount">—</strong>
         </div>
       </div>
-      <p>© <span id="year"></span> Mehedi Hasan. All rights reserved.</p>
+      <p class="copyright">© <span id="year"></span> Mehedi Hasan. All rights reserved.</p>
     </div>
   </footer>
 
@@ -1175,14 +1173,8 @@
   </a>
 
   <script>
-    /* ============================================================
-       1) YEAR
-    ============================================================ */
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    /* ============================================================
-       2) THEME TOGGLE
-    ============================================================ */
     (function initTheme() {
       const root = document.documentElement;
       const saved = localStorage.getItem('mh-theme');
@@ -1200,13 +1192,9 @@
       });
     })();
 
-    /* ============================================================
-       3) SCROLL PROGRESS BAR
-    ============================================================ */
     (function initProgress() {
       const bar = document.getElementById('scrollProgress');
       let ticking = false;
-
       function update() {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -1214,20 +1202,12 @@
         bar.style.width = percent + '%';
         ticking = false;
       }
-
       window.addEventListener('scroll', () => {
-        if (!ticking) {
-          requestAnimationFrame(update);
-          ticking = true;
-        }
+        if (!ticking) { requestAnimationFrame(update); ticking = true; }
       }, { passive: true });
-
       update();
     })();
 
-    /* ============================================================
-       4) SCROLL REVEAL ANIMATIONS
-    ============================================================ */
     (function initReveal() {
       const items = document.querySelectorAll('.reveal, .reveal-stagger');
       if (!('IntersectionObserver' in window)) {
@@ -1242,13 +1222,9 @@
           }
         });
       }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-
       items.forEach(el => io.observe(el));
     })();
 
-    /* ============================================================
-       5) TYPEWRITER EFFECT
-    ============================================================ */
     (function initTypewriter() {
       const el = document.getElementById('typewriter');
       const phrases = [
@@ -1258,11 +1234,7 @@
         'Upholding GMP Standards.'
       ];
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      if (reduceMotion) {
-        el.textContent = phrases[0];
-        return;
-      }
+      if (reduceMotion) { el.textContent = phrases[0]; return; }
 
       let phraseIdx = 0, charIdx = 0, deleting = false;
       const TYPE_SPEED = 70, DELETE_SPEED = 40, HOLD_TIME = 1800;
@@ -1291,9 +1263,6 @@
       setTimeout(tick, 400);
     })();
 
-    /* ============================================================
-       6) BLOG — data + render + modal
-    ============================================================ */
     const blogPosts = [
       {
         id: 1,
@@ -1368,24 +1337,20 @@
         document.body.style.overflow = 'hidden';
         modalClose.focus();
       }
-
       function closeModal() {
         modal.classList.remove('open');
         document.body.style.overflow = '';
       }
-
       grid.addEventListener('click', (e) => {
         const card = e.target.closest('.blog-card');
         if (card) openModal(card.dataset.id);
       });
-
       grid.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           const card = e.target.closest('.blog-card');
           if (card) { e.preventDefault(); openModal(card.dataset.id); }
         }
       });
-
       modalClose.addEventListener('click', closeModal);
       modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
       document.addEventListener('keydown', (e) => {
@@ -1393,9 +1358,6 @@
       });
     })();
 
-    /* ============================================================
-       7) EMAIL FORM — Web3Forms with validation
-    ============================================================ */
     (function initEmailForm() {
       const form = document.getElementById('contactForm');
       const status = document.getElementById('formStatus');
@@ -1406,12 +1368,7 @@
       const messageInput = document.getElementById('message');
 
       const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      const FREE_EMAIL_DOMAINS = [
-        'gmail.com','yahoo.com','outlook.com','hotmail.com','live.com',
-        'icloud.com','protonmail.com','proton.me','aol.com','gmx.com','mail.com','zoho.com'
-      ];
 
-      // Real-time email validation
       function validateEmail(showValid = false) {
         const val = emailInput.value.trim();
         if (!val) {
@@ -1436,7 +1393,6 @@
         if (nameInput.value.trim()) nameInput.classList.add('valid');
         else nameInput.classList.remove('valid');
       });
-
       messageInput.addEventListener('input', () => {
         if (messageInput.value.trim().length >= 5) messageInput.classList.add('valid');
         else messageInput.classList.remove('valid');
@@ -1449,37 +1405,25 @@
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-
         const name = nameInput.value.trim();
         const email = emailInput.value.trim();
         const message = messageInput.value.trim();
 
-        // Validation
         if (!name || !email || !message) {
           setStatus('⚠ Please fill in all required fields.', 'error');
           return;
         }
-
         if (!EMAIL_REGEX.test(email)) {
           setStatus('⚠ Please enter a valid email address (e.g., name@gmail.com).', 'error');
           emailInput.classList.add('invalid');
           emailInput.focus();
           return;
         }
-
-        // Optional: check for suspicious disposable domains (basic)
-        const domain = email.split('@')[1].toLowerCase();
-        if (!domain.includes('.') || domain.length < 4) {
-          setStatus('⚠ Email domain looks invalid. Please double-check.', 'error');
-          return;
-        }
-
         if (message.length < 5) {
           setStatus('⚠ Message is too short.', 'error');
           return;
         }
 
-        // Submit to Web3Forms
         submitBtn.disabled = true;
         submitText.textContent = 'Sending…';
         setStatus('Sending your message…', 'loading');
@@ -1511,9 +1455,6 @@
       });
     })();
 
-    /* ============================================================
-       8) VISITOR COUNTER (localStorage demo)
-    ============================================================ */
     (function initCounter() {
       const el = document.getElementById('visitorCount');
       try {
