@@ -10,18 +10,17 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mehedi Hasan | Quality Assurance Professional" />
   <meta property="og:description" content="Pharmaceutical Quality Assurance Professional — GMP, Compliance, Documentation." />
-  <meta property="og:image" content="https://i.postimg.cc/2SyXPpq9/mh-jpg.png" />
+  <meta property="og:image" content="https://i.postimg.cc/MGG47Y2c/M.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <title>Mehedi Hasan | Quality Assurance Professional</title>
-  <link rel="icon" href="https://i.postimg.cc/2SyXPpq9/mh-jpg.png" />
+  <link rel="icon" href="https://i.postimg.cc/MGG47Y2c/M.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
-    /* ============ THEME TOKENS ============ */
     :root,
     [data-theme="dark"] {
       --bg: #0b0b0b;
@@ -71,7 +70,6 @@
 
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
-
     .container { width: min(1100px, 92%); margin: 0 auto; }
 
     /* ============ SCROLL PROGRESS BAR ============ */
@@ -216,6 +214,7 @@
       line-height: 1.08;
       letter-spacing: -0.03em;
       margin-bottom: 20px;
+      min-height: 1.15em;
     }
 
     h1 span, h2 span { color: var(--gold); }
@@ -247,16 +246,9 @@
       gap: 60px;
     }
 
-    .hero p {
-      font-size: 17px;
-      max-width: 520px;
-      margin-top: 4px;
-    }
+    .hero p { font-size: 17px; max-width: 520px; margin-top: 4px; }
 
-    /* Typewriter */
-    .typewriter {
-      display: inline;
-    }
+    .typewriter { display: inline; }
 
     .typewriter .cursor {
       display: inline-block;
@@ -275,13 +267,20 @@
 
     .profile-img {
       width: 100%;
-      max-width: 320px;
+      max-width: 340px;
       aspect-ratio: 4 / 5;
       object-fit: cover;
+      object-position: center top;
       margin-left: auto;
       border: 1.5px solid var(--gold);
       border-radius: 16px;
       box-shadow: 0 20px 60px var(--gold-soft);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.02) translateY(-4px);
+      box-shadow: 0 25px 70px rgba(214, 181, 109, 0.22);
     }
 
     .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
@@ -340,6 +339,12 @@
 
     .btn-primary:hover { color: #0b0b0b; }
     [data-theme="light"] .btn-primary:hover { color: #ffffff; }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
 
     .btn:focus-visible,
     a:focus-visible,
@@ -402,9 +407,7 @@
     .service-card::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       height: 2px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
       opacity: 0;
@@ -624,11 +627,7 @@
 
     .modal-body p:last-child { margin-bottom: 0; }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes slideUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
@@ -669,6 +668,7 @@
 
     .contact-item a:hover { opacity: 0.75; }
 
+    /* ============ EMAIL FORM ============ */
     .contact-form { display: grid; gap: 18px; }
 
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -681,6 +681,8 @@
       color: var(--text);
       letter-spacing: -0.01em;
     }
+
+    .form-group label .req { color: var(--gold); margin-left: 2px; }
 
     .form-group input,
     .form-group textarea {
@@ -702,11 +704,28 @@
       box-shadow: 0 0 0 3px var(--gold-soft);
     }
 
+    .form-group input.invalid,
+    .form-group textarea.invalid {
+      border-color: #e67e7e;
+      box-shadow: 0 0 0 3px rgba(230, 126, 126, 0.15);
+    }
+
+    .form-group input.valid { border-color: var(--green); }
+
     .form-group textarea { min-height: 140px; resize: vertical; }
 
     .form-note { font-size: 12px; color: var(--muted); }
 
-    .form-status { color: var(--gold); font-size: 13px; font-weight: 500; }
+    .form-status {
+      font-size: 13px;
+      font-weight: 500;
+      min-height: 20px;
+      transition: color 0.2s ease;
+    }
+
+    .form-status.success { color: var(--green); }
+    .form-status.error { color: #e67e7e; }
+    .form-status.loading { color: var(--gold); }
 
     /* ============ FOOTER ============ */
     footer {
@@ -820,7 +839,7 @@
 
     @media (max-width: 860px) {
       .hero-grid { grid-template-columns: 1fr; gap: 44px; }
-      .profile-img { margin: 0 auto; max-width: 260px; }
+      .profile-img { margin: 0 auto; max-width: 280px; }
       .contact-grid { grid-template-columns: 1fr; gap: 32px; }
       .grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
@@ -861,14 +880,13 @@
 </head>
 <body>
 
-  <!-- SCROLL PROGRESS BAR -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- HEADER -->
+  <!-- ============ HEADER ============ -->
   <header>
     <div class="container navbar">
       <a href="#home" class="logo-wrap" aria-label="Home">
-        <img class="logo" src="https://i.postimg.cc/2SyXPpq9/mh-jpg.png" alt="Mehedi Hasan logo" />
+        <img class="logo" src="https://i.postimg.cc/MGG47Y2c/M.png" alt="Mehedi Hasan logo" />
         <span class="logo-text">Mehedi <span>Hasan</span></span>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
@@ -886,7 +904,7 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- ============ HERO ============ -->
   <section class="hero" id="home">
     <div class="container hero-grid">
       <div class="reveal">
@@ -908,12 +926,14 @@
         </div>
       </div>
       <div class="reveal">
-        <img class="profile-img" src="https://i.postimg.cc/2SyXPpq9/mh-jpg.png" alt="Mehedi Hasan portrait" />
+        <img class="profile-img"
+             src="https://i.postimg.cc/MGG47Y2c/M.png"
+             alt="Mehedi Hasan — Quality Assurance Professional" />
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ============ ABOUT ============ -->
   <section id="about">
     <div class="container">
       <div class="section-header reveal">
@@ -946,7 +966,7 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- ============ SKILLS ============ -->
   <section id="skills">
     <div class="container">
       <div class="section-header reveal">
@@ -971,7 +991,7 @@
     </div>
   </section>
 
-  <!-- SERVICES (with icons) -->
+  <!-- ============ SERVICES ============ -->
   <section id="services">
     <div class="container">
       <div class="section-header reveal">
@@ -1032,7 +1052,7 @@
     </div>
   </section>
 
-  <!-- BLOG -->
+  <!-- ============ BLOG ============ -->
   <section id="blog">
     <div class="container">
       <div class="section-header reveal">
@@ -1044,7 +1064,7 @@
     </div>
   </section>
 
-  <!-- BLOG MODAL -->
+  <!-- ============ BLOG MODAL ============ -->
   <div class="modal-overlay" id="blogModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal">
       <button class="modal-close" id="modalClose" aria-label="Close article">
@@ -1061,66 +1081,76 @@
     </div>
   </div>
 
-  <!-- CONTACT -->
+  <!-- ============ CONTACT ============ -->
   <section id="contact">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Get in Touch</span>
         <h2>Let's <span>Connect</span></h2>
-        <p>Have a question, opportunity, or just want to say hello? Drop a message — it opens directly in WhatsApp.</p>
+        <p>Have a question, opportunity, or just want to say hello? Send me an email — I'll respond within 24 hours.</p>
       </div>
 
       <div class="contact-grid reveal">
         <div class="contact-links">
           <div class="contact-item">
             <span class="label">Email</span>
-            <a href="mailto:hello@mehedihasan.com">hello@mehedihasan.com</a>
+            <a href="mailto:mohammaad.mehedi@gmail.com">mohammaad.mehedi@gmail.com</a>
           </div>
           <div class="contact-item">
-            <span class="label">Phone</span>
-            <a href="tel:+8801700000000">+880 1700 000 000</a>
+            <span class="label">Phone / WhatsApp</span>
+            <a href="tel:+8801631228949">+880 1631 228949</a>
           </div>
           <div class="contact-item">
             <span class="label">Location</span>
-            <a href="#">Dhaka, Bangladesh</a>
+            <a href="#">Bangladesh</a>
           </div>
           <div class="contact-item">
             <span class="label">LinkedIn</span>
-            <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin.com/in/mehedihasan</a>
+            <a href="https://linkedin.com/in/mohammad-mehedi-b35ab8333" target="_blank" rel="noopener">
+              linkedin.com/in/mohammad-mehedi-b35ab8333
+            </a>
           </div>
         </div>
 
+        <!-- ============ EMAIL FORM (Web3Forms) ============ -->
         <form class="contact-form" id="contactForm" novalidate>
+          <!-- Web3Forms config -->
+          <input type="hidden" name="access_key" value="d706cf53-9ff1-4e63-bf59-5e54b430454c" />
+          <input type="hidden" name="subject" value="New message from your website" />
+          <input type="hidden" name="from_name" value="Mehedi Hasan Website" />
+          <!-- honeypot for spam bots -->
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your full name" required />
+              <label for="name">Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
             </div>
           </div>
           <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="What is this about?" />
+            <label for="subjectField">Subject</label>
+            <input type="text" id="subjectField" name="user_subject" placeholder="What is this about?" />
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
+            <label for="message">Message <span class="req">*</span></label>
             <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">
-            Send via WhatsApp
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            <span id="submitText">Send Message</span>
             <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
-          <p class="form-note">Your message will open in WhatsApp — no backend required.</p>
+          <p class="form-note">Your message goes directly to my inbox. I'll reply within 24 hours.</p>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ============ FOOTER ============ -->
   <footer>
     <div class="container">
       <div class="footer-main">
@@ -1133,9 +1163,9 @@
     </div>
   </footer>
 
-  <!-- WHATSAPP FLOAT -->
+  <!-- ============ WHATSAPP FLOAT ============ -->
   <a class="whatsapp-float"
-     href="https://wa.me/8801700000000"
+     href="https://wa.me/8801631228949"
      target="_blank"
      rel="noopener"
      aria-label="Chat on WhatsApp">
@@ -1145,14 +1175,6 @@
   </a>
 
   <script>
-    /* ============================================================
-       CONFIG — change these to your real details
-    ============================================================ */
-    const CONFIG = {
-      whatsappNumber: '8801700000000',   // 👈 your number, no + or spaces
-      defaultSubject: 'New message from website'
-    };
-
     /* ============================================================
        1) YEAR
     ============================================================ */
@@ -1242,17 +1264,11 @@
         return;
       }
 
-      let phraseIdx = 0;
-      let charIdx = 0;
-      let deleting = false;
-
-      const TYPE_SPEED = 70;
-      const DELETE_SPEED = 40;
-      const HOLD_TIME = 1800;
+      let phraseIdx = 0, charIdx = 0, deleting = false;
+      const TYPE_SPEED = 70, DELETE_SPEED = 40, HOLD_TIME = 1800;
 
       function tick() {
         const current = phrases[phraseIdx];
-
         if (!deleting) {
           charIdx++;
           el.textContent = current.slice(0, charIdx);
@@ -1272,7 +1288,6 @@
           setTimeout(tick, DELETE_SPEED);
         }
       }
-
       setTimeout(tick, 400);
     })();
 
@@ -1379,48 +1394,120 @@
     })();
 
     /* ============================================================
-       7) CONTACT FORM → WHATSAPP DIRECT
+       7) EMAIL FORM — Web3Forms with validation
     ============================================================ */
-    (function initForm() {
+    (function initEmailForm() {
       const form = document.getElementById('contactForm');
       const status = document.getElementById('formStatus');
+      const submitBtn = document.getElementById('submitBtn');
+      const submitText = document.getElementById('submitText');
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
 
-      form.addEventListener('submit', (e) => {
+      const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const FREE_EMAIL_DOMAINS = [
+        'gmail.com','yahoo.com','outlook.com','hotmail.com','live.com',
+        'icloud.com','protonmail.com','proton.me','aol.com','gmx.com','mail.com','zoho.com'
+      ];
+
+      // Real-time email validation
+      function validateEmail(showValid = false) {
+        const val = emailInput.value.trim();
+        if (!val) {
+          emailInput.classList.remove('valid', 'invalid');
+          return false;
+        }
+        if (EMAIL_REGEX.test(val)) {
+          emailInput.classList.remove('invalid');
+          if (showValid) emailInput.classList.add('valid');
+          return true;
+        } else {
+          emailInput.classList.remove('valid');
+          if (showValid) emailInput.classList.add('invalid');
+          return false;
+        }
+      }
+
+      emailInput.addEventListener('input', () => validateEmail(true));
+      emailInput.addEventListener('blur', () => validateEmail(false));
+
+      nameInput.addEventListener('input', () => {
+        if (nameInput.value.trim()) nameInput.classList.add('valid');
+        else nameInput.classList.remove('valid');
+      });
+
+      messageInput.addEventListener('input', () => {
+        if (messageInput.value.trim().length >= 5) messageInput.classList.add('valid');
+        else messageInput.classList.remove('valid');
+      });
+
+      function setStatus(text, type = '') {
+        status.textContent = text;
+        status.className = 'form-status ' + type;
+      }
+
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const data = new FormData(form);
-        const name = (data.get('name') || '').trim();
-        const email = (data.get('email') || '').trim();
-        const subject = (data.get('subject') || '').trim() || CONFIG.defaultSubject;
-        const message = (data.get('message') || '').trim();
 
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
+
+        // Validation
         if (!name || !email || !message) {
-          status.textContent = '⚠ Please fill in all required fields.';
-          status.style.color = '#e67e7e';
+          setStatus('⚠ Please fill in all required fields.', 'error');
           return;
         }
 
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          status.textContent = '⚠ Please enter a valid email address.';
-          status.style.color = '#e67e7e';
+        if (!EMAIL_REGEX.test(email)) {
+          setStatus('⚠ Please enter a valid email address (e.g., name@gmail.com).', 'error');
+          emailInput.classList.add('invalid');
+          emailInput.focus();
           return;
         }
 
-        const text =
-          `*New message from your website*\n\n` +
-          `*Name:* ${name}\n` +
-          `*Email:* ${email}\n` +
-          `*Subject:* ${subject}\n\n` +
-          `*Message:*\n${message}`;
+        // Optional: check for suspicious disposable domains (basic)
+        const domain = email.split('@')[1].toLowerCase();
+        if (!domain.includes('.') || domain.length < 4) {
+          setStatus('⚠ Email domain looks invalid. Please double-check.', 'error');
+          return;
+        }
 
-        const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`;
+        if (message.length < 5) {
+          setStatus('⚠ Message is too short.', 'error');
+          return;
+        }
 
-        status.textContent = '✓ Opening WhatsApp…';
-        status.style.color = 'var(--gold)';
+        // Submit to Web3Forms
+        submitBtn.disabled = true;
+        submitText.textContent = 'Sending…';
+        setStatus('Sending your message…', 'loading');
 
-        window.open(url, '_blank', 'noopener');
-        form.reset();
+        try {
+          const formData = new FormData(form);
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+          });
+          const result = await response.json();
 
-        setTimeout(() => { status.textContent = ''; }, 4000);
+          if (result.success) {
+            setStatus('✓ Message sent! I\'ll reply within 24 hours.', 'success');
+            form.reset();
+            nameInput.classList.remove('valid');
+            emailInput.classList.remove('valid', 'invalid');
+            messageInput.classList.remove('valid');
+            setTimeout(() => setStatus(''), 6000);
+          } else {
+            setStatus('✗ ' + (result.message || 'Something went wrong. Please try again.'), 'error');
+          }
+        } catch (err) {
+          setStatus('✗ Network error. Please check your connection and try again.', 'error');
+        } finally {
+          submitBtn.disabled = false;
+          submitText.textContent = 'Send Message';
+        }
       });
     })();
 
