@@ -123,7 +123,7 @@
 
     .logo-text span { color: var(--gold); }
 
-    .nav-links { display: flex; align-items: center; gap: 26px; }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
 
     .nav-links a {
       color: var(--muted);
@@ -355,6 +355,25 @@
       outline-offset: 2px;
     }
 
+    /* ============ HERO TRUST STRIP ============ */
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .trust-strip span {
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--card);
+    }
+
     /* ============ GRID & CARDS ============ */
     .grid {
       display: grid;
@@ -476,6 +495,120 @@
     }
 
     [data-theme="light"] .skill:hover { color: #ffffff; }
+
+    /* ============ COMPLIANCE / AUDIT TRACK RECORD ============ */
+    .audit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .audit-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--card);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .audit-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .audit-card:hover {
+      border-color: var(--border-gold);
+      background: var(--card-hover);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    .audit-card:hover::before { opacity: 1; }
+
+    .audit-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: var(--gold-soft);
+      border: 1px solid var(--border-gold);
+      border-radius: 999px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .audit-badge svg {
+      width: 14px; height: 14px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .audit-card h3 { color: var(--text); margin-bottom: 10px; }
+
+    .audit-card .audit-role {
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .audit-card p { font-size: 14.5px; line-height: 1.65; }
+
+    .audit-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .audit-meta span {
+      font-size: 11.5px;
+      color: var(--muted);
+      font-weight: 500;
+      padding: 3px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    /* Contribution flow strip */
+    .audit-flow {
+      margin-top: 36px;
+      padding: 22px 26px;
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      background: var(--gold-soft);
+    }
+
+    .audit-flow h3 {
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .audit-flow ol {
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.8;
+    }
+
+    .audit-flow ol li::marker { color: var(--gold); font-weight: 700; }
+    .audit-flow ol li strong { color: var(--text); }
 
     /* ============ BLOG ============ */
     .blog-grid {
@@ -843,14 +976,15 @@
       .contact-grid { grid-template-columns: 1fr; gap: 32px; }
       .grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
+      .audit-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
       section { padding: 64px 0; }
       .hero { padding: 60px 0 50px; }
       .navbar { min-height: 64px; gap: 12px; }
-      .nav-links { gap: 14px; }
-      .nav-links a { font-size: 12.5px; }
+      .nav-links { gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+      .nav-links a { font-size: 12px; }
       .logo-text { display: none; }
       h1 { font-size: 36px; }
       .btn { padding: 11px 18px; font-size: 13px; }
@@ -893,6 +1027,7 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#compliance">Compliance</a>
         <a href="#services">Services</a>
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
@@ -922,7 +1057,15 @@
             Get in Touch
             <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a href="#about" class="btn">Learn More</a>
+          <a href="#compliance" class="btn">View Audit Record</a>
+        </div>
+
+        <!-- Trust strip -->
+        <div class="trust-strip" aria-label="Compliance highlights">
+          <span>DGDA Audited</span>
+          <span>WHO GMP</span>
+          <span>EU GMP</span>
+          <span>RPPF</span>
         </div>
       </div>
       <div class="reveal">
@@ -988,6 +1131,117 @@
         <span class="skill">Regulatory Guidelines</span>
         <span class="skill">Validation Support</span>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPLIANCE / AUDIT TRACK RECORD ============ -->
+  <section id="compliance">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Compliance Track Record</span>
+        <h2>Facilities I've <span>Directly &amp; Indirectly</span> Supported</h2>
+        <p>
+          Through my QA responsibilities, I have contributed — directly and as part of
+          cross-functional teams — to facilities that successfully cleared regulatory
+          and international GMP audits.
+        </p>
+      </div>
+
+      <div class="audit-grid reveal-stagger">
+
+        <!-- DGDA -->
+        <div class="audit-card">
+          <span class="audit-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            DGDA Audit Passed
+          </span>
+          <h3>DGDA Facility Audit</h3>
+          <p class="audit-role">Contributed through QA documentation &amp; compliance support</p>
+          <p>
+            Supported the facility in preparation for the Directorate General of Drug
+            Administration (DGDA) audit — including SOP alignment, batch record
+            verification, deviation records, and on-site documentation readiness.
+          </p>
+          <div class="audit-meta">
+            <span>Bangladesh</span>
+            <span>GMP Compliance</span>
+            <span>Documentation</span>
+          </div>
+        </div>
+
+        <!-- WHO -->
+        <div class="audit-card">
+          <span class="audit-badge">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+            WHO GMP Passed
+          </span>
+          <h3>WHO-GMP Compliance</h3>
+          <p class="audit-role">Indirectly involved — QA participation in audit readiness</p>
+          <p>
+            Contributed to WHO GMP audit preparedness through data integrity review,
+            batch manufacturing record verification, CAPA follow-ups, and alignment
+            of quality systems with WHO GMP standards.
+          </p>
+          <div class="audit-meta">
+            <span>WHO GMP</span>
+            <span>Data Integrity</span>
+            <span>CAPA</span>
+          </div>
+        </div>
+
+        <!-- EU GMP -->
+        <div class="audit-card">
+          <span class="audit-badge">
+            <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            EU GMP Facility
+          </span>
+          <h3>EU GMP Aligned Facility</h3>
+          <p class="audit-role">Part of QA team during compliance &amp; audit cycle</p>
+          <p>
+            Supported EU GMP compliance efforts through documentation control, change
+            control, deviation investigation, and preparation of quality records for
+            international audit review.
+          </p>
+          <div class="audit-meta">
+            <span>EU GMP</span>
+            <span>Change Control</span>
+            <span>Deviation</span>
+          </div>
+        </div>
+
+        <!-- RPPF -->
+        <div class="audit-card">
+          <span class="audit-badge">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>
+            RPPF Certified
+          </span>
+          <h3>RPPF Facility</h3>
+          <p class="audit-role">Involved in documentation &amp; product quality assurance</p>
+          <p>
+            Contributed to RPPF (Renewable Pharmaceuticals Production Facility)
+            requirements — covering documentation accuracy, product quality monitoring,
+            and compliance alignment across production and QC workflows.
+          </p>
+          <div class="audit-meta">
+            <span>RPPF</span>
+            <span>Product Quality</span>
+            <span>Documentation</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Contribution flow -->
+      <div class="audit-flow reveal">
+        <h3>How I Contribute to Audit Readiness</h3>
+        <ol>
+          <li><strong>Documentation Control</strong> — SOPs, BMR/BPR, deviation logs, and audit trail review.</li>
+          <li><strong>Product Quality Monitoring</strong> — in-process checks, batch release support, and specification verification.</li>
+          <li><strong>Regulatory Compliance</strong> — alignment with DGDA, WHO GMP, and EU GMP requirements.</li>
+          <li><strong>Cross-Functional Coordination</strong> — working alongside Production, QC, and Regulatory teams.</li>
+        </ol>
+      </div>
+
     </div>
   </section>
 
